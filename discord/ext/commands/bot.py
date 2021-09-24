@@ -115,7 +115,7 @@ def when_mentioned(bot: Union[Bot, AutoShardedBot], msg: Message) -> List[str]:
     These are meant to be passed into the :attr:`.Bot.command_prefix` attribute.
     """
     # bot.user will never be None when this is called
-    return [f"<@{bot.user.id}> ", f"<@!{bot.user.id}> "]  # type: ignore
+    return [f"<@{bot.user.id}> ", f"<@!{bot.user.id}> ",f"<@{bot.user.id}>", f"<@!{bot.user.id}>"]  # type: ignore
 
 
 def when_mentioned_or(*prefixes: str) -> Callable[[Union[Bot, AutoShardedBot], Message], List[str]]:
